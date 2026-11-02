@@ -7,15 +7,14 @@ cask "spotter" do
   desc "Invisible menu bar assistant that diagnoses the screen with a local LLM"
   homepage "https://github.com/cataWalter/spotter"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Spotter.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-rd", "com.apple.quarantine", "#{appdir}/Spotter.app"],
-                   sudo: false
-  end
-
   zap trash: "~/Library/Preferences/it.spotter.app.plist"
+
+  caveats <<~EOS
+    Spotter is ad-hoc signed and not notarized by Apple. If macOS blocks the first launch, run:
+      xattr -dr com.apple.quarantine /Applications/Spotter.app
+  EOS
 end
