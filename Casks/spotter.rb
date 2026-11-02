@@ -17,7 +17,5 @@ cask "spotter" do
                    sudo: false
   end
 
-  zap trash: [
-    "~/Library/Preferences/it.spotter.app.plist",
-  ]
+  zap trash: "~/Library/Preferences/it.spotter.app.plist"
 end
