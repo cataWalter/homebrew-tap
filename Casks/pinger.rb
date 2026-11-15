@@ -1,8 +1,8 @@
 cask "pinger" do
-  version "0.36"
-  sha256 "759ac3e1fe0a9426c4d20010b695d26c06eec0c4939f6654527132efef03f909"
+  version "0.37"
+  sha256 "50099a4064061d7cace75027884bd97808669d9bd2b264e4f6ad42b179bb739d"
 
-  url "https://github.com/cataWalter/pinger/releases/download/v0.36/Pinger-0.36-macos-universal.dmg"
+  url "https://github.com/cataWalter/pinger/releases/download/v0.37/Pinger-0.37-macos-universal.dmg"
   name "Pinger"
   desc "Triage-focused Matrix desktop client with local AI assistance"
   homepage "https://github.com/cataWalter/pinger"
